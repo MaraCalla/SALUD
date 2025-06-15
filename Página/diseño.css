@@ -1,0 +1,618 @@
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #2c5530, #4a7c59);
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
+}
+
+/* Secciones */
+.section {
+    display: none;
+    min-height: calc(100vh - 200px);
+    padding: 2rem 0;
+}
+
+.section.active {
+    display: block;
+}
+
+/* Inicio */
+.hero {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #e8f5e8, #d4edd4);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.hero h2 {
+    color: #2c5530;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: #2c5530;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.motivation-section {
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.motivation-section h3 {
+    color: #2c5530;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.quotes {
+    display: grid;
+    gap: 1.5rem;
+}
+
+blockquote {
+    background: linear-gradient(135deg, #fff8dc, #f0f8db);
+    padding: 1.5rem;
+    border-left: 5px solid #4a7c59;
+    border-radius: 10px;
+    font-style: italic;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.warning-section {
+    background: #fff3cd;
+    border: 2px solid #ffc107;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.warning-section h3 {
+    color: #856404;
+    margin-bottom: 1rem;
+}
+
+.warning-section p {
+    color: #856404;
+    font-weight: 500;
+}
+
+/* Alimentos - Círculo */
+.food-circle-container {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+.food-circle {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.slice {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    transform-origin: 100% 100%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.slice span {
+    transform: rotate(-36deg);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.slice-1 {
+    background: linear-gradient(135deg, #8B4513, #A0522D);
+    transform: rotate(0deg);
+}
+
+.slice-2 {
+    background: linear-gradient(135deg, #228B22, #32CD32);
+    transform: rotate(72deg);
+}
+
+.slice-2 span {
+    transform: rotate(-108deg);
+}
+
+.slice-3 {
+    background: linear-gradient(135deg, #4169E1, #6495ED);
+    transform: rotate(144deg);
+}
+
+.slice-3 span {
+    transform: rotate(-180deg);
+}
+
+.slice-4 {
+    background: linear-gradient(135deg, #DC143C, #FF6347);
+    transform: rotate(216deg);
+}
+
+.slice-4 span {
+    transform: rotate(-252deg);
+}
+
+.slice-5 {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    transform: rotate(288deg);
+}
+
+.slice-5 span {
+    transform: rotate(-324deg);
+}
+
+.slice:hover {
+    transform: scale(1.1) rotate(var(--rotation));
+    z-index: 10;
+}
+
+.food-info {
+    margin-top: 2rem;
+}
+
+.food-info.hidden {
+    display: none;
+}
+
+.food-detail {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #666;
+}
+
+.food-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.food-section h4 {
+    color: #2c5530;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #4a7c59;
+    padding-bottom: 0.5rem;
+}
+
+.food-section ul {
+    list-style-position: inside;
+    color: #555;
+}
+
+.food-section li {
+    margin-bottom: 0.5rem;
+}
+
+/* Herramientas */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.tool-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+}
+
+.tool-box:hover {
+    transform: translateY(-5px);
+    border-color: #4a7c59;
+}
+
+.tool-box h3 {
+    color: #2c5530;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.tool-btn {
+    background: linear-gradient(135deg, #4a7c59, #2c5530);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.tool-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.tool-content {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.tool-content.hidden {
+    display: none;
+}
+
+/* Calculadora */
+.calc-form {
+    display: grid;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.calc-form input,
+.calc-form select {
+    padding: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.calc-form button {
+    background: #4a7c59;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.calc-result {
+    margin-top: 2rem;
+    padding: 2rem;
+    background: #e8f5e8;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Ejercicios */
+.exercise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.exercise-card {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid #4a7c59;
+}
+
+/* Formulario de consultas */
+.query-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.query-form input,
+.query-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.query-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Mapa */
+.map-container {
+    height: 400px;
+    background: #e8f5e8;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 1.2rem;
+}
+
+.map-filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.8rem 1.5rem;
+    border: 2px solid #4a7c59;
+    background: white;
+    color: #4a7c59;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: #4a7c59;
+    color: white;
+}
+
+/* Preguntas FAQ */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: white;
+    margin-bottom: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.faq-question {
+    background: #4a7c59;
+    color: white;
+    padding: 1.5rem;
+    cursor: pointer;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+    background: #2c5530;
+}
+
+.faq-question::after {
+    content: '+';
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question::after {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    padding: 0 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    padding: 1.5rem;
+    max-height: 200px;
+}
+
+/* Footer */
+footer {
+    background: #2c5530;
+    color: white;
+    padding: 3rem 0 1rem;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+    margin-bottom: 1rem;
+    color: #90EE90;
+    font-size: 1.2rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #90EE90;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 1rem;
+    text-align: center;
+    color: #ccc;
+}
+
+/* Utilidades */
+.hidden {
+    display: none !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .nav-menu {
+        gap: 1rem;
+    }
+    
+    .nav-link {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    .food-circle {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .slice {
+        font-size: 0.8rem;
+    }
+    
+    .content-grid,
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .food-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-menu {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .food-circle {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .slice {
+        font-size: 0.7rem;
+    }
+}

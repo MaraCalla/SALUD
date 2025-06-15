@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guías Alimentarias para la Población Argentina</title>
+    <link rel="stylesheet" href="diseño.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Guías Alimentarias para la Población Argentina</h1>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#" data-section="inicio" class="nav-link active">INICIO</a></li>
+                    <li><a href="#" data-section="alimentos" class="nav-link">ALIMENTOS</a></li>
+                    <li><a href="#" data-section="herramientas" class="nav-link">HERRAMIENTAS</a></li>
+                    <li><a href="#" data-section="preguntas" class="nav-link">PREGUNTAS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- SECCIÓN INICIO -->
+        <section id="inicio" class="section active">
+            <div class="container">
+                <div class="hero">
+                    <h2>Alimentación Saludable para Argentina</h2>
+                    <p>Promovemos hábitos alimentarios saludables basados en evidencia científica</p>
+                </div>
+
+                <div class="content-grid">
+                    <div class="card">
+                        <h3>Nuestros Objetivos</h3>
+                        <p>Promover una alimentación equilibrada y variada que contribuya a la salud y bienestar de toda la población argentina, basada en alimentos locales y culturalmente apropiados.</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>¿Por qué es importante?</h3>
+                        <p>Una alimentación adecuada previene enfermedades crónicas, mejora la calidad de vida y contribuye al desarrollo integral de las personas en todas las etapas de la vida.</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Nuestro Equipo</h3>
+                        <p>Nutricionistas, médicos, investigadores y profesionales de la salud trabajando juntos para brindar información confiable y actualizada sobre alimentación saludable.</p>
+                    </div>
+                </div>
+
+                <div class="motivation-section">
+                    <h3>Frases Motivadoras</h3>
+                    <div class="quotes">
+                        <blockquote>"Que tu medicina sea tu alimento, y tu alimento tu medicina" - Hipócrates</blockquote>
+                        <blockquote>"Una alimentación saludable es una inversión en tu futuro"</blockquote>
+                        <blockquote>"Cada comida es una oportunidad para nutrir tu cuerpo"</blockquote>
+                    </div>
+                </div>
+
+                <div class="warning-section">
+                    <h3>⚠️ Advertencia Importante</h3>
+                    <p>La información proporcionada en este sitio es de carácter educativo y no reemplaza la consulta médica profesional. Siempre consulte con un profesional de la salud antes de realizar cambios significativos en su dieta, especialmente si tiene condiciones médicas específicas.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN ALIMENTOS -->
+        <section id="alimentos" class="section">
+            <div class="container">
+                <h2>Grupos de Alimentos</h2>
+                <p>Selecciona un grupo para conocer más información</p>
+                
+                <div class="food-circle-container">
+                    <div class="food-circle">
+                        <div class="slice slice-1" data-group="cereales">
+                            <span>Cereales y Legumbres</span>
+                        </div>
+                        <div class="slice slice-2" data-group="verduras">
+                            <span>Verduras y Frutas</span>
+                        </div>
+                        <div class="slice slice-3" data-group="lacteos">
+                            <span>Lácteos</span>
+                        </div>
+                        <div class="slice slice-4" data-group="carnes">
+                            <span>Carnes y Huevos</span>
+                        </div>
+                        <div class="slice slice-5" data-group="aceites">
+                            <span>Aceites y Grasas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="food-info" class="food-info hidden">
+                    <div class="food-detail">
+                        <button class="close-btn">&times;</button>
+                        <h3 id="food-title"></h3>
+                        <div class="food-content">
+                            <div class="food-section">
+                                <h4>Alimentos Recomendados</h4>
+                                <ul id="food-recommendations"></ul>
+                            </div>
+                            <div class="food-section">
+                                <h4>Importancia Científica</h4>
+                                <p id="food-science"></p>
+                            </div>
+                            <div class="food-section">
+                                <h4>Beneficios</h4>
+                                <ul id="food-benefits"></ul>
+                            </div>
+                            <div class="food-section">
+                                <h4>Porción Sugerida</h4>
+                                <p id="food-portion"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN HERRAMIENTAS -->
+        <section id="herramientas" class="section">
+            <div class="container">
+                <h2>Herramientas Nutricionales</h2>
+                
+                <div class="tools-grid">
+                    <div class="tool-box" id="calculadora">
+                        <h3>🧮 Calculadora Nutricional</h3>
+                        <p>Calcula tu IMC y requerimientos calóricos diarios</p>
+                        <button class="tool-btn" data-tool="calc">Usar Calculadora</button>
+                    </div>
+
+                    <div class="tool-box" id="ejercicios">
+                        <h3>🏃‍♀️ Ejercicios Recomendados</h3>
+                        <p>Rutinas de ejercicio complementarias a tu alimentación</p>
+                        <button class="tool-btn" data-tool="exercise">Ver Ejercicios</button>
+                    </div>
+
+                    <div class="tool-box" id="consultas">
+                        <h3>❓ ¿Para qué es bueno...?</h3>
+                        <p>Consulta sobre beneficios específicos de alimentos</p>
+                        <button class="tool-btn" data-tool="query">Hacer Consulta</button>
+                    </div>
+
+                    <div class="tool-box" id="mapa">
+                        <h3>🗺️ Mapa Nutricional</h3>
+                        <p>Encuentra hospitales, tiendas y profesionales cerca</p>
+                        <button class="tool-btn" data-tool="map">Ver Mapa</button>
+                    </div>
+                </div>
+
+                <!-- Contenido de herramientas -->
+                <div id="tool-content" class="tool-content hidden"></div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN PREGUNTAS -->
+        <section id="preguntas" class="section">
+            <div class="container">
+                <h2>Preguntas Frecuentes</h2>
+                
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <h3 class="faq-question">¿Cómo usar esta página web?</h3>
+                        <div class="faq-answer">
+                            <p>Navega por las diferentes secciones usando el menú superior. En "Alimentos" encontrarás información detallada sobre grupos alimentarios, en "Herramientas" tienes calculadoras y recursos útiles.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">¿La información es confiable?</h3>
+                        <div class="faq-answer">
+                            <p>Toda la información está basada en las Guías Alimentarias oficiales del Ministerio de Salud de Argentina y evidencia científica actualizada.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">¿Puedo seguir estas recomendaciones si tengo alguna condición médica?</h3>
+                        <div class="faq-answer">
+                            <p>Siempre consulta con tu médico o nutricionista antes de realizar cambios en tu dieta, especialmente si tienes condiciones médicas como diabetes, hipertensión o alergias.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">¿Con qué frecuencia se actualiza la información?</h3>
+                        <div class="faq-answer">
+                            <p>La información se revisa y actualiza periódicamente siguiendo las últimas recomendaciones del Ministerio de Salud y evidencia científica disponible.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">¿Cómo puedo contactar con un profesional?</h3>
+                        <div class="faq-answer">
+                            <p>Utiliza la herramienta "Mapa Nutricional" para encontrar profesionales cerca de tu ubicación, o consulta los enlaces en el pie de página para información oficial.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Enlaces Oficiales</h4>
+                    <ul>
+                        <li><a href="https://www.argentina.gob.ar/salud" target="_blank">Ministerio de Salud</a></li>
+                        <li><a href="https://www.argentina.gob.ar/salud/alimentacion" target="_blank">Dirección de Alimentación Saludable</a></li>
+                        <li><a href="https://www.anmat.gov.ar" target="_blank">ANMAT</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>📧 alimentacion@msal.gov.ar</li>
+                        <li>📞 0800-222-1002</li>
+                        <li>📍 Av. 9 de Julio 1925, CABA</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Recursos Adicionales</h4>
+                    <ul>
+                        <li><a href="#" target="_blank">Guía Alimentaria PDF</a></li>
+                        <li><a href="#" target="_blank">Recetas Saludables</a></li>
+                        <li><a href="#" target="_blank">Material Educativo</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ministerio de Salud de la Nación Argentina. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
